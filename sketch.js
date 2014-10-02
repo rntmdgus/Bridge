@@ -1,12 +1,10 @@
-//var a;
 var r;
-var trailX = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var trailY = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var trailX = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var trailY = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function setup(){
    createCanvas(1920,830);
 
-//   a=0;
    r=0;
    size=[120,70,100];
    size1=[180,100,150];
@@ -445,38 +443,16 @@ function draw(){
 
    // mouse ellipse
    ellipse(mouseX, mouseY, 3, 3);
+
    // trail ellopse #0
    trailX[0] = (mouseX + trailX[0] * 3) / 4;
    trailY[0] = (mouseY + trailY[0] * 3) / 4;
    ellipse(trailX[0], trailY[0], 3, 3);
 
-   for (var i = 1; i < 10; i = i +1)
+   for (var i = 1; i < 20; i = i +1)
    {
       trailX[i] = (trailX[i-1] + trailX[i] * 5) / 6;
       trailY[i] = (trailY[i-1] + trailY[i] * 5) / 6;
       ellipse(trailX[i], trailY[i], 4, 4);
    }
 }
-
-
-
-
-
-
-//바닷물
-/*      for(var i = a%400 ;i<500;i++){
-      stroke(((a+i)%500)*50/500);
-      line(0,i+500,1920,i+500);
-
-   }
-
-   for(var i = 0 ;i<a%500;i++){
-      stroke(((a+i)%500)*50/500);
-      line(0,i+500,1920,i+500);
-
-   }
-
-a++;   
-*/
-
-
